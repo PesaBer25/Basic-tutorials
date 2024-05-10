@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+<title>Sign-Up Page</title>
+<style>
+*{
+margin: 0;
+padding: 0;
+box-size: content-box;
+}
+body{
+background-color: tomato;
+font-family: Tahoma;
+}
+.header{
+display: flex;
+justify-contet: center;
+}
+h1{
+text-align: center;
+font-size: 25px;
+}
+.desc{
+font-size: 15px;
+font-style: italic;
+text-align: center;
+}
+.in{
+border: none;
+border-radius: 25px;
+width: 90%;
+margin: 20px auto;
+padding: 20px 10px;
+background-color: hsla(120,35%,40%,0.3);
+}
+input[type="submit"]{
+border-radius: 20px;
+height: 35px;
+width: 50%;
+background-color: #aaff77;
+margin: 6px 70px; 
+}
+input,select{
+width: 90%;
+margin-bottom: 10px;
+}
+fieldset{
+border: none;
+}
+.header{
+text-align: center;
+margin: 5px 0px;
+font-weight: bold;
+}
+fieldset input{
+width: unset;
+}
+fieldset label{
+margin: 5px;
+}
+.main{
+width: 90%;
+margin: 0 auto;
+}
+.form{
+padding-left: 8px;
+}
+</style>
+</head>
+<body>
+<div class="in">
+<div>
+<h1> Welcome to Sir Emmanuel University</h1>
+<p class="desc"> Sir Emmanuel University is one of the Best Universities in the Lake region and you are assured of quality education and market oriented skills.</p>
+</div>
+<div class="main">
+<form class="form">
+<p class="header">Capture your details in this admission form</p>
+<div>
+<label for="name">Enter Name</label><br>
+<input id="name" placeholder="eg. Ray On Spy" required type="text"><br>
+<label for="email">Email address</label><br>
+<input id="email" required placeholder="eg. mark@gmail.com" type="email"><br>
+<label for="no">Enter phone number</label><br>
+<input id="no" placeholder="eg. 0769600012" type="number"><br>
+<label for="psswd">Create a password</label><br>
+<input type="password" id="psswd" required minlength="8" ><br>
+</div>
+<fieldset>
+<legend>Do you have any disability<legend>
+<input type="radio" id="d" name="disability" value="1">
+<label for="d">Yes</label><br>
+<input type="radio" id="dd" name="disability" value="0">
+<label for="dd">No</label><br>
+</fieldset>
+<fieldset class="check">
+<legend>Define your study schedule<legend>
+<input type="checkbox" id="c1" name="studyT"><label for="c1">PartTime</label><br>
+<input type="checkbox" id="c2" name="studyT"><label for="c2">FullTime</label><br>
+<input type="checkbox" id="c3" name="studyT"><label for="c3">Physical Classes</label><br>
+<input type="checkbox" id="c4" name="studyT"><label for="c4">Online Classes</label><br>
+<p>How did you hear about us<p>
+<select id="us">
+<option> Select one</option>
+<option>Adverts</option>
+<option>From a friend</option>
+<option>A google search</option>
+<option>Other</option>
+</select>
+<p>Tell us a little about yourself</p>
+</fieldset>
+<fieldset>
+<input  name="about" type="textarea" placeholder="I am a lazy student...">
+</fieldset>
+<input type="submit" value="Submit">
+</form>
+</div>
+<p style="margin-bottom: 8px;">Already a member? <a href="login.html">Login</a></p>
+</div>
+</body>
+</html>
