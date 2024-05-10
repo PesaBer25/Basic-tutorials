@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Player</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.whole{
+width: 65%;
+background-color: #444444;
+margin: 50px auto;
+color: tomato;
+padding: 3px;
+border: 5px solid #1d2c3b;
+border-radius: 35px;
+}
+#screen{
+padding: 0;
+border-top: 1.5px solid #997;
+border-left: 1px solid #774;
+border-right: 1.5px solid #997;
+border-bottom: 1px solid #774;
+height: 250px;
+width: 98%;
+background-color: #111;
+}
+.header p{
+margin-bottom: 8px;
+text-align: center;
+}
+button{
+background-color: #3d3dff;
+border-radius: 10px 10px 0 0;
+}
+strong{
+color: #ffffff;
+font-size: 30px;
+border-bottom: 2px solid #33dca1;
+border-radius: 7px;
+}
+#home,#mp3{
+text-align: center;
+height:250px;
+display: none;
+margin: 0;
+border: 0.1px solid #111;
+font-size: 25px;
+font-style: italic;
+background-image: url(content://media/external/downloads/9008);
+background-size: cover;
+background-repeat: no-repeat;
+background-height: 100%;
+width: 100%;
+color: #bbb;
+}
+.btns{
+display: flex;
+margin: 7px;
+justify-content: space-around;
+}
+.tg{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 46px;
+}
+.controls{
+display: flex;
+height: 50px;
+flex: 2;
+justify-content: space-between;
+}
+#power{
+flex: 0.4;
+border-radius: 25px;
+height: 45px;
+align-self: center;
+background-color: #cc0111;
+}
+.bt,.bt1{
+flex: 0.2;
+padding: 0;
+font-size: 5vw;
+background-color: #33bca1;
+border-radius: 20px 0 0 20px;
+}
+.play{
+border-radius: 3px;
+flex: 0.5;
+font-size: 14px;
+}
+.bt1{
+border-radius: 0 20px 20px 0;
+}
+.nne{
+border-radius: 0 0 10px 10px;
+}
+body{
+background-color: #ccaadd;
+}
+#mp3{
+background-image: url(content://media/external/downloads/9006);
+display: none;
+}
+#mp3 p,#mp3 .label{
+margin: 0 0 0px 2px;
+color: black;
+}
+.label{
+margin: 0px 0px;
+font-style: normal;
+font-size: 3vw;
+}
+#mp4{
+height: 250px;
+margin: 0px;
+with: 100%;
+border: 1px solid #110000;
+display: none;
+background-color: #222;
+}
+</style>
+</head>
+<body>
+<div class="whole">
+<div class="header"><p>Mark Emmanuel<br><strong>…</strong></p>
+</div>
+<div id="screen">
+<div id="home">
+<p>Muziki Dawa<br>Enjoy Yourself</p>
+<p>Play Mp3 audio<br>and Mp4 Video</p>
+</div>
+<div id="mp3">
+<p>Home Of Music</p>
+<p class="pl label" for="1">Wavy-khaligraph</p>
+<audio id="1" >
+<source  src="content://media/external/downloads/8991" type="audio/mpeg">
+</audio>
+<p class="p1 label">Lifetime-Quavo</p>
+<audio id="2">
+<source src="content://media/external/downloads/8282" type="audio/mpeg">
+</audio>
+<p class="p2 label">Hiroshima-Dax</p>
+<audio id="3">
+<source src="content://media/external/downloads/8990" type="audio/mpeg">
+</audio>
+<p class="p3 label">Spiritual-KiDi</p>
+<audio id="4">
+<source src="content://media/external/downloads/8156" type="audio/mpeg">
+</audio>
+<p class="p4 label">Perfect Reason-Ed sheeran X Calum</p>
+<audio id="5">
+<source src="content://media/external/downloads/9121" type="audio/mpeg">
+</audio>
+<p class="p5 label">I Love You-LadySmith</p>
+<audio id="6">
+<source src="content://media/external/downloads/8159" type="audio/mpeg">
+</audio>
+<p class="p6 label">Nyathi Nyakach-Biggy</p>
+<audio id="7">
+<source src="content://media/external/downloads/8920" type="audio/mpeg">
+</audio>
+<p class="p7 label">Affline Pretty-George Ramogi</p>
+<audio id="8">
+<source src="content://media/external/downloads/8921" type="audio/mpeg">
+</audio>
+<p class="p8 label">Birthday-Migos</p>
+<audio id="9">
+<source src="content://media/external/downloads/8028" type="audio/mpeg">
+</audio>
+<p class="p9 label">Milly-Odhiambo Tusker</p>
+<audio id="10">
+<source src="content://media/external/downloads/8524" type="audio/mpeg">
+</audio>
+<p class="p10 label">Khali Cartel 3-Rekless</p>
+<audio id="11">
+<source src="content://media/external/downloads/8992" type="audio/mpeg">
+</audio>
+<p class="p11 label">Pok Aneno-Emma Jalamo</p>
+<audio id="12">
+<source src="content://media/external/downloads/8924" type="audio/mpeg">
+</audio>
+<p class="p12 label">Bado Nakupenda-Prince Indah</p>
+<audio id="13">
+<source src="content://media/external/downloads/8916" type="audio/mpeg">
+</audio>
+<p class="p13 label">Mano Kasinde-Abenny Jachiga</p>
+<audio id="14">
+<source src="content://media/external/downloads/8917" type="audio/mpeg">
+</audio>
+<p class="p14 label">Jathum Chamo Suya-Odhiambo Tusker</p>
+<audio id="15">
+<source src="content://media/external/downloads/8548" type="audio/mpeg">
+</audio>
+<p class="p15 label">Posa Ya Bolingo-Theluji</p>
+<audio id="16">
+<source src="content://media/external/downloads/8922" type="audio/mpeg">
+</audio>
+</div>
+<div id="mp4">
+<video height="250" width="219" id="v1">
+<source src="content://media/external/downloads/9046" type="video/mp4">
+</video>
+</div> 
+</div>
+<div class="btns">
+<div class="tg">
+<button onclick="musik()">Mp3</button>
+<button onclick="mp4()" class="nne">Mp4</button>
+</div>
+<div class="controls">
+<button onclick="up()" class="bt">&uarr;</button>
+<button onclick="playPause()" class="bt play">play</button>
+<button onclick="down()" class="bt1">&darr;</button>
+</div>
+<button onclick="onOff()" id="power">(<sup>|</sup>)</button>
+</div>
+<script>
+let g=0;
+let t = 0;
+let y = 1 ;
+let x = 1;
+let m = 1;
+function onOff(){
+m = 1;
+if(x == 1){
+g = 0;
+document.getElementById("home").style.display = "block" ;
+x -= 1 ;
+}else{
+g = 0;
+document.getElementById("mp4").style.display = "none";
+document.getElementById("home").style.display = " none" ;
+x += 1 ;
+document.getElementById("mp3").style.display = "none" ;
+m = 0;
+t = 0;
+end();
+document.getElementById("v1").pause();
+}
+}
+function end(){
+document.getElementById("1").pause();
+document.getElementById("2").pause();
+document.getElementById("3").pause();
+document.getElementById("4").pause();
+document.getElementById("5").pause();
+document.getElementById("6").pause();
+document.getElementById("7").pause();
+document.getElementById("8").pause();
+document.getElementById("9").pause();
+document.getElementById("10").pause();
+document.getElementById("11").pause();
+document.getElementById("12").pause();
+document.getElementById("13").pause();
+document.getElementById("14").pause();
+document.getElementById("15").pause();
+document.getElementById("16").pause();
+g = 0;
+}
+function mp4(){
+if (x == 0 && m == 1){
+end();
+t = 1;
+document.getElementById("mp4").style.display = "block" ;
+document.getElementById("home").style.display ="none";
+document.getElementById("mp3").style.display = "none";
+}
+}
+function musik(){
+document.getElementById("v1").pause();
+if (x == 0 && m == 1){
+t=0;
+g=1;
+document.getElementById("mp4").style.display = "none";
+document.getElementById("mp3").style.display = "block" ;
+document.getElementById("home").style.display = "none";
+}
+}
+if (y == 1){
+document.querySelector(".pl").style.color = "hsla(120,70%,60%,0.9)" ;
+y=2;
+}
+function down(){
+if(y == 2 && x == 0 && g == 1){
+document.getElementById("1").pause();
+document.querySelector(".pl").style.color = "black" ;
+document.querySelector(".p1").style.color = "hsla(120,70%,60%,0.9)" ;
+y=3;
+}else if(y==3 && x == 0 && g == 1){
+document.getElementById("2").pause();
+document.querySelector(".p2").style.color = "hsla(120,70%,60%,0.9)";
+document.querySelector(".p1").style.color = "black";
+y=4;
+}else if(y==4 && x == 0 && g == 1){
+document.getElementById("3").pause();
+document.querySelector(".p2").style.color = "black" ;
+document.querySelector(".p3").style.color = "hsla(120,70%,60%,0.9)";
+y=5;
+}else if(y==5 && x == 0 && g == 1){
+document.getElementById("4").pause();
+document.querySelector(".p3").style.color = "black";
+document.querySelector(".p4").style.color = "hsla(120,70%,60%,0.9)";
+y=6;
+}else if(y==6 && x == 0 && g == 1){
+document.getElementById("5").pause();
+document.querySelector(".p4").style.color = "black";
+document.querySelector(".p5").style.color = "hsla(120,70%,60%,0.9)";
+y=7;
+}else if(y==7 && x == 0 && g == 1){
+document.getElementById("6").pause();
+document.querySelector(".p5").style.color = "black";
+document.querySelector(".p6").style.color = "hsla(120,70%,60%,0.9)";
+y=8;
+}else if(y==8 && x == 0 && g == 1){
+document.getElementById("7").pause();
+document.querySelector(".p6").style.color = "black";
+document.querySelector(".p7").style.color = "hsla(120,70%,60%,0.9)";
+y=9;
+}else if(y==9 && x == 0 && g == 1){
+document.getElementById("8").pause();
+document.querySelector(".p7").style.color = "black";
+document.querySelector(".p8").style.color = "hsla(120,70%,60%,0.9)";
+y=10;
+}else if(y==10 && x == 0 && g == 1){
+document.getElementById("9").pause();
+document.querySelector(".p8").style.color = "black";
+document.querySelector(".p9").style.color = "hsla(120,70%,60%,0.9)";
+y=11;
+}else if(y==11 && x == 0 && g == 1){
+document.getElementById("10").pause();
+document.querySelector(".p9").style.color = "black";
+document.querySelector(".p10").style.color = "hsla(120,70%,60%,0.9)";
+y=12;
+}else if(y==12 && x == 0 && g == 1){
+document.getElementById("11").pause();
+document.querySelector(".p10").style.color = "black";
+document.querySelector(".p11").style.color = "hsla(120,70%,60%,0.9)";
+y=13;
+}else if(y==13 && x == 0 && g == 1){
+document.getElementById("12").pause();
+document.querySelector(".p11").style.color = "black";
+document.querySelector(".p12").style.color = "hsla(120,70%,60%,0.9)";
+y=14;
+}else if(y==14 && x == 0 && g == 1){
+document.getElementById("13").pause();
+document.querySelector(".p12").style.color = "black";
+document.querySelector(".p13").style.color = "hsla(120,70%,60%,0.9)";
+y=15;
+}else if(y==15 && x == 0 && g == 1){
+document.getElementById("14").pause();
+document.querySelector(".p13").style.color = "black";
+document.querySelector(".p14").style.color = "hsla(120,70%,60%,0.9)";
+y=16;
+}else if( y == 16 && x == 0 && g == 1){
+document.getElementById("15").pause();
+document.querySelector(".p14").style.color = "black";
+document.querySelector(".p15").style.color = "hsla(120,70%,60%,0.9)";
+document.querySelector(".pl").style.color = "black";
+y=17;
+}
+}
+function up(){ 
+if( y == 3 && x == 0 && g == 1 ){
+document.getElementById("2").pause();
+document.querySelector(".pl").style.color = "hsla(120,70%,60%,0.9)" ;
+document.querySelector(".p1").style.color = "black" ;
+y = 2;
+}else if (y == 4 && x == 0 && g == 1 ){
+document.getElementById("3").pause();
+document.querySelector(".p2").style.color = "black";
+document.querySelector(".p1").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 3;
+}else if (y == 5 && x == 0 && g == 1 ){
+document.getElementById("4").pause();
+document.querySelector(".p3").style.color = "black";
+document.querySelector(".p2").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 4;
+}else if (y == 6 && x == 0 && g == 1 ){
+document.getElementById("5").pause();
+document.querySelector(".p4").style.color = "black";
+document.querySelector(".p3").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 5;
+}else if (y == 7 && x == 0 && g == 1 ){
+document.getElementById("6").pause();
+document.querySelector(".p5").style.color = "black";
+document.querySelector(".p4").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 6;
+}else if (y == 8 && x == 0 && g == 1 ){
+document.getElementById("7").pause();
+document.querySelector(".p6").style.color = "black";
+document.querySelector(".p5").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 7;
+}else if (y == 9 && x == 0 && g == 1 ){
+document.getElementById("8").pause();
+document.querySelector(".p7").style.color = "black";
+document.querySelector(".p6").style.color = "hsla(120,70%,60%,0.9)" ;;
+y = 8;
+}else if (y == 10 && x == 0 && g == 1 ){
+document.getElementById("9").pause();
+document.querySelector(".p8").style.color = "black";
+document.querySelector(".p7").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 9;
+}else if (y == 11 && x == 0 && g == 1 ){
+document.getElementById("10").pause();
+document.querySelector(".p9").style.color = "black";
+document.querySelector(".p8").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 10;
+}else if (y == 12 && x == 0 && g == 1 ){
+document.getElementById("11").pause();
+document.querySelector(".p10").style.color = "black";;
+document.querySelector(".p9").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 11;
+}else if (y == 13 && x == 0 && g == 1 ){
+document.getElementById("12").pause();
+document.querySelector(".p11").style.color = "black";
+document.querySelector(".p10").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 12;
+}else if (y == 14 && x == 0 && g == 1 ){
+document.getElementById("13").pause();
+document.querySelector(".p12").style.color = "black";
+document.querySelector(".p11").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 13;
+}else if (y == 15 && x == 0 && g == 1 ){
+document.getElementById("14").pause();
+document.querySelector(".p13").style.color = "black";
+document.querySelector(".p12").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 14;
+}else if (y == 16 && x == 0 && g == 1 ){
+document.getElementById("15").pause();
+document.querySelector(".p14").style.color = "black";
+document.querySelector(".p13").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 15;
+}else if (y == 17 && x == 0 && g == 1 ){
+document.getElementById("16").pause();
+document.querySelector(".p15").style.color = "black";
+document.querySelector(".p14").style.color = "hsla(120,70%,60%,0.9)" ;
+y = 16;
+}
+}
+function playPause(){
+if ( y == 2 && x==0 && g==1){
+document.getElementById("1").play();
+}else if ( y == 3 && x == 0 && g == 1){
+document.getElementById("2").play();
+}else if ( y == 4 && x == 0 && g == 1){
+document.getElementById("3").play();
+}else if ( y == 5 && x == 0 && g == 1){
+document.getElementById("4").play();
+}else if ( y == 6 && x == 0 && g == 1){
+document.getElementById("5").play();
+}else if ( y == 7 && x == 0 && g == 1){
+document.getElementById("6").play();
+}else if ( y == 8 && x == 0 && g == 1){
+document.getElementById("7").play();
+}else if ( y == 9 && x == 0 && g == 1){
+document.getElementById("8").play();
+}else if ( y == 10 && x == 0 && g == 1){
+document.getElementById("9").play();
+}else if ( y == 11 && x == 0 && g == 1){
+document.getElementById("10").play();
+}else if ( y == 12 && x == 0 && g == 1){
+document.getElementById("11").play();
+}else if ( y == 13 && x == 0 && g == 1){
+document.getElementById("12").play();
+}else if ( y == 14 && x == 0 && g == 1){
+document.getElementById("13").play();
+}else if ( y == 15 && x == 0 && g == 1){
+document.getElementById("14").play();
+}else if( y == 16 && x == 0 && g == 1){ 
+document.getElementById("15").play();
+}else if( y == 17 && x == 0 && g == 1){
+document.getElementById("16").play();
+}
+if (t == 1 ){
+document.getElementById("v1").play();
+document.getElementById("mp4").style.backgroundColor = "#111";
+}
+}
+</script>
+</body>
+</html>
